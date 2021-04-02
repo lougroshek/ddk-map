@@ -11,7 +11,6 @@ import { Tracking } from './../Tracking'
 import useStore from './../store'
 import { theme } from './../theme'
 import Language from './components/Language'
-import SEO from './components/SEO'
 import NormingManager from './../NormingManager'
 
 import 'mapbox-gl/dist/mapbox-gl.css'
