@@ -203,7 +203,6 @@ const App = props => {
   return (
     <ThemeProvider theme={theme}>
       <Language {...props} />
-      <SEO />
       <DataLoader />
       <RouteManager />
       <Tracking />
