@@ -2,3 +2,14 @@
 /dist
 /node_modules
 npm-debug.log*
+/coverage
+/es
+/lib
+/node_modules
+/umd
+npm-debug.log*
+.DS_Store
+/demo/dist/**
+
+.env
+.env.*
