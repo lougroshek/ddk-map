@@ -40,12 +40,12 @@ jobs:
           cat .env
 
       - name: Run nwb build
-        run: nwb build-react-component --copy-files
+        run: nwb build-react-app
 
       - name: Deploy 🚀
         uses: crazy-max/ghaction-github-pages@v1
         with:
           target_branch: gh-pages
-          build_dir: demo/dist
+          build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
