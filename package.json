@@ -15,7 +15,7 @@
     "@fontsource/fira-sans": "^4.2.0",
     "@fontsource/fira-sans-condensed": "^4.2.2",
     "@fontsource/merriweather": "^4.2.0",
-    "@hyperobjekt/mapbox": "^1.0.12",
+    "@hyperobjekt/mapbox": "1.0.12",
     "@hyperobjekt/us-states": "^1.0.4",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
