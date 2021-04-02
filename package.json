@@ -1,7 +1,7 @@
 {
-  "name": "ddk-map-new",
+  "name": "ddk-map",
   "version": "1.0.0",
-  "description": "Describe ddk-map-new here",
+  "description": "Interactive map app for diversitydatakids.org",
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",
@@ -12,13 +12,56 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@fontsource/fira-sans": "^4.2.0",
+    "@fontsource/fira-sans-condensed": "^4.2.2",
+    "@fontsource/merriweather": "^4.2.0",
+    "@hyperobjekt/mapbox": "^1.0.12",
+    "@hyperobjekt/us-states": "^1.0.4",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@pureartisan/simple-i18n": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "classnames": "^2.2.6",
+    "clsx": "^1.1.1",
+    "copy-to-clipboard": "^3.3.1",
+    "copy-webpack-plugin": "^6.4.1",
+    "d3": "^6.5.0",
+    "d3-ease": "^2.0.0",
+    "deepmerge": "^4.2.2",
+    "dotenv-webpack": "^5.1.0",
+    "fontsource-roboto": "^3.0.3",
+    "immutable": "^4.0.0-rc.12",
+    "nwb": "0.25.x",
+    "papaparse": "^5.3.0",
+    "prop-types": "^15.7.2",
+    "react-autosuggest": "^10.1.0",
+    "react-device-detect": "^1.14.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^3.11.0",
+    "react-map-gl": "^5.2.10",
+    "react-resize-aware": "^3.1.0",
+    "react-simple-maps": "^2.3.0",
+    "recharts": "^2.0.7",
+    "turf": "^3.0.14",
+    "zustand": "^3.2.0"
   },
   "devDependencies": {
-    "nwb": "0.25.x"
+    "babel-register": "^6.26.0",
+    "nwb": "0.25.x",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
-  "author": "",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "Lou Groshek, <lou@lougroshek.com>",
+  "homepage": "",
   "license": "MIT",
-  "repository": ""
+  "repository": "git@github.com:Hyperobjekt/ddk-map.git",
+  "keywords": [
+    "react-component"
+  ]
 }
