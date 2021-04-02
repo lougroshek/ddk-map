@@ -813,7 +813,7 @@ const BaseMap = ({ ...props }) => {
   }
 
   const handleLoad = () => {
-    console.log('Map loaded.')
+    // console.log('Map loaded.')
     setLoaded(true)
     document.dispatchEvent(new Event('mapDataLoaded'))
     updateCentered()
