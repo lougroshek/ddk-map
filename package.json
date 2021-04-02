@@ -48,6 +48,7 @@
   "devDependencies": {
     "babel-register": "^6.26.0",
     "nwb": "0.25.x",
+    "prettier": "2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

@@ -1,8 +1,9 @@
 import './index.css'
 
 import React from 'react'
-import {render} from 'react-dom'
+import { render } from 'react-dom'
 
 import App from './App'
+import { Explorer } from './modules/ddk'
 
-render(<App/>, document.querySelector('#app'))
+render(<Explorer />, document.querySelector('#explorer'))
