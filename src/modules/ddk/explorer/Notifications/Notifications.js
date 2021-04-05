@@ -126,9 +126,10 @@ const Notifications = () => {
     ) {
       return getNotification(activeNorm)
     } else {
-      return ''
+      return false
     }
   }, [
+    activeView,
     activeNorm,
     centerMetro,
     centerState,
@@ -144,7 +145,7 @@ const Notifications = () => {
     updateNotifications(activeNorm)
   }
 
-  if (notification && notification.length > 0) {
+  if (!!notification) {
     return (
       <div
         className={clsx('map-notifications', classes.root)}
