@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/><script src="https://polyfill.io/v3/polyfill.min.js?features=Array.from,Array.prototype.entries,Array.prototype.find,Array.prototype.keys,Array.prototype.sort,Array.prototype.values,ArrayBuffer,Blob,console,DataView,document,Element,es5,Float32Array,Float64Array,Int16Array,Int32Array,Int8Array,Intl,JSON,localStorage,Map,Math.clz32,Math.cosh,Math.hypot,Math.log2,Math.sinh,Math.tanh,Number.isFinite,Number.MAX_SAFE_INTEGER,Object.assign,Object.getOwnPropertyDescriptors,Object.getOwnPropertySymbols,Object.is,Object.isExtensible,Object.isFrozen,Object.isSealed,Object.preventExtensions,Object.seal,Object.setPrototypeOf,Object.values,Promise,Reflect,Reflect.construct,Reflect.get,RegExp.prototype.flags,requestAnimationFrame,Set,String.prototype.endsWith,String.prototype.normalize,Symbol,Symbol.for,Symbol.iterator,TextDecoder,Uint16Array,Uint32Array,Uint8Array,Uint8ClampedArray,URL,WeakMap,WeakSet"></script><script>var hash = window.location.hash
+      var index = window.location.href.indexOf('check.html')
+      var root = window.location.href.slice(0, index)
+      // console.log('hash = ', window.location, root)
+      /*!
+       * copy from is.js : https://is.js.org/
+       * Author: Aras Atasaygin
+       */
+      var navigator = window && window.navigator
+      var userAgent = (
+        (navigator && navigator.userAgent) ||
+        ''
+      ).toLowerCase()
+      var vendor = (
+        (navigator && navigator.vendor) ||
+        ''
+      ).toLowerCase()
+      var comparator = {
+        '<': function (a, b) {
+          return a < b
+        },
+        '<=': function (a, b) {
+          return a <= b
+        },
+        '>': function (a, b) {
+          return a > b
+        },
+        '>=': function (a, b) {
+          return a >= b
+        },
+      }
+      function compareVersion(version, range) {
+        var string = range + ''
+        var n = +(string.match(/\d+/) || NaN)
+        var op = string.match(/^[<>]=?|/)[0]
+        return comparator[op]
+          ? comparator[op](version, n)
+          : version == n || n !== n
+      }
+      function opera(range) {
+        var match = userAgent.match(
+          /(?:^opera.+?version|opr)\/(\d+)/,
+        )
+        return (
+          match !== null && compareVersion(match[1], range)
+        )
+      }
+      function chrome(range) {
+        var match = /google inc/.test(vendor)
+          ? userAgent.match(/(?:chrome|crios)\/(\d+)/)
+          : null
+        return (
+          match !== null &&
+          !opera() &&
+          compareVersion(match[1], range)
+        )
+      }
+      function edge(range) {
+        var match = userAgent.match(/edge\/(\d+)/)
+        return (
+          match !== null && compareVersion(match[1], range)
+        )
+      }
+      function firefox(range) {
+        var match = userAgent.match(
+          /(?:firefox|fxios)\/(\d+)/,
+        )
+        return (
+          match !== null && compareVersion(match[1], range)
+        )
+      }
+      function ie(range) {
+        var match = userAgent.match(
+          /(?:msie |trident.+?; rv:)(\d+)/,
+        )
+        return (
+          match !== null && compareVersion(match[1], range)
+        )
+      }
+      function safari(range) {
+        var match = userAgent.match(
+          /version\/(\d+).+?safari/,
+        )
+        return (
+          match !== null && compareVersion(match[1], range)
+        )
+      }
+      // redirect to un-support page if browser is not in our support range
+      if (chrome('<88')) {
+        document.location =
+          root + '/unsupported.html#chrome'
+      } else if (firefox('<85')) {
+        document.location =
+          root + '/unsupported.html#firefox'
+      } else if (safari('<13')) {
+        document.location =
+          root + '/unsupported.html#safari'
+      } else if (ie('<12')) {
+        document.location = root + '/unsupported.html#ie'
+      } else if (edge('<88')) {
+        document.location = root + '/unsupported.html#edge'
+      } else {
+        document.location = root + hash
+      }</script><meta name="description" content="Exploratory map developed by diversitydatakids.org"><meta name="keywords" content="child, opportunity, measure, index, metric, health, social, economic, education, national, state, metro"><meta property="og:title" content="Maps | Diversity Data Kids"><meta property="og:description" content="Exploratory map developed by diversitydatakids.org"><meta property="og:type" content="website"><meta property="og:image" content="https://diversitydatakids.org/maps/share-image.png"><meta property="og:url" content="https://diversitydatakids.org/maps"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:creator" content="diversitydatakids.org"><meta property="twitter:title" content="Maps | Diversity Data Kids"><meta property="twitter:description" content="Exploratory map developed by diversitydatakids.org"><meta property="twitter:image" content="https://diversitydatakids.org/maps/share-image.png"><meta property="fb:app_id" content="527190134911454"><link rel="icon" href="favicon.png"><link href="vendor.d9656923.css" rel="stylesheet"><link href="app.87d90986.css" rel="stylesheet"></head><body><div id="explorer"></div><script>!function(e){function r(r){for(var n,l,f=r[0],i=r[1],a=r[2],c=0,s=[];c<f.length;c++)l=f[c],Object.prototype.hasOwnProperty.call(o,l)&&o[l]&&s.push(o[l][0]),o[l]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);for(p&&p(r);s.length;)s.shift()();return u.push.apply(u,a||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,f=1;f<t.length;f++){var i=t[f];0!==o[i]&&(n=!1)}n&&(u.splice(r--,1),e=l(l.s=t[0]))}return e}var n={},o={1:0},u=[];function l(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,l),t.l=!0,t.exports}l.m=e,l.c=n,l.d=function(e,r,t){l.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,r){if(1&r&&(e=l(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(l.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)l.d(t,n,function(r){return e[r]}.bind(null,n));return t},l.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(r,"a",r),r},l.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},l.p="";var f=window.webpackJsonp=window.webpackJsonp||[],i=f.push.bind(f);f.push=r,f=f.slice();for(var a=0;a<f.length;a++)r(f[a]);var p=i;t()}([]);</script><script src="vendor.a43b8d03.js"></script><script src="app.c00c1160.js"></script></body></html>
